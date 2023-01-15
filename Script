@@ -1,0 +1,157 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+
+
+
+if game.PlaceId == 6284583030 then
+    local Window = Library.CreateLib("Incluvious PSX", "Ocean")
+
+
+    -- Home Gui
+    local Main = Window:NewTab("🏠Home")
+
+    -- Home Contents
+    local MainSection = Main:NewSection("Credits   :  Made By Rishie#4626")
+    local MainSection = Main:NewSection("https://discord.gg/5tNsjxjhTR")
+    MainSection:NewButton("Copy Discord", "Copies the Discord Link", function()
+        setclipboard('https://discord.gg/5tNsjxjhTR')
+    end)
+
+
+    
+    -- Teleport Gui
+    local Teleport = Window:NewTab("🌀Teleport")
+    local Teleport = Teleport:NewSection("Spawn World (Only Works If In Spawn World")
+    Teleport:NewButton("Shop ", "Teleports you to the shop", function()
+        function teleportTO(placeCFrame)
+            local plyr = game.Players.LocalPlayer;
+            if plyr.Character then
+                plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+            end
+        end
+        
+        teleportTO(game:GetService("Workspace")["__MAP"].Teleports.Shop.CFrame)
+    end)
+    Teleport:NewButton("Town", "Teleports you to the town ", function()
+        function teleportTO(placeCFrame)
+            local plyr = game.Players.LocalPlayer;
+            if plyr.Character then
+                plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+            end
+        end
+        
+        teleportTO(game:GetService("Workspace")["__MAP"].Teleports.Town.CFrame)
+    end)
+    Teleport:NewButton("Forest", "Teleports you to the forest ", function()
+        function teleportTO(placeCFrame)
+            local plyr = game.Players.LocalPlayer;
+            if plyr.Character then
+                plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+            end
+        end
+        
+        teleportTO(game:GetService("Workspace")["__MAP"].Teleports.Forest.CFrame)
+    end)
+    Teleport:NewButton("Beach", "Teleports you to the Beach", function()
+        function teleportTO(placeCFrame)
+            local plyr = game.Players.LocalPlayer;
+            if plyr.Character then
+                plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+            end
+        end
+        
+        teleportTO(game:GetService("Workspace")["__MAP"].Teleports.Beach.CFrame)
+    end)
+    Teleport:NewButton("Mine", "Teleports you to the Mine", function()
+        function teleportTO(placeCFrame)
+            local plyr = game.Players.LocalPlayer;
+            if plyr.Character then
+                plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+            end
+        end
+        
+        teleportTO(game:GetService("Workspace")["__MAP"].Teleports.Mine.CFrame)
+    end)
+    Teleport:NewButton("Winter", "Teleports you to the Winter", function()
+        function teleportTO(placeCFrame)
+            local plyr = game.Players.LocalPlayer;
+            if plyr.Character then
+                plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+            end
+        end
+        
+        teleportTO(game:GetService("Workspace")["__MAP"].Teleports.Winter.CFrame)
+    end)
+    Teleport:NewButton("Glacier", "Teleports you to the Glacier", function()
+        function teleportTO(placeCFrame)
+            local plyr = game.Players.LocalPlayer;
+            if plyr.Character then
+                plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+            end
+        end
+        
+        teleportTO(game:GetService("Workspace")["__MAP"].Teleports.Glacier.CFrame)
+    end)
+    Teleport:NewButton("Desert", "Teleports you to the Desert", function()
+        function teleportTO(placeCFrame)
+            local plyr = game.Players.LocalPlayer;
+            if plyr.Character then
+                plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+            end
+        end
+        
+        teleportTO(game:GetService("Workspace")["__MAP"].Teleports.Desert.CFrame)
+    end)
+    Teleport:NewButton("Volcano", "Teleports you to the Volcano", function()
+        function teleportTO(placeCFrame)
+            local plyr = game.Players.LocalPlayer;
+            if plyr.Character then
+                plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+            end
+        end
+        
+        teleportTO(game:GetService("Workspace")["__MAP"].Teleports.Volcano.CFrame)
+    end)
+    Teleport:NewButton("Cave", "Teleports you to the Cave", function()
+        function teleportTO(placeCFrame)
+            local plyr = game.Players.LocalPlayer;
+            if plyr.Character then
+                plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+            end
+        end
+        
+        teleportTO(game:GetService("Workspace")["__MAP"].Teleports.Cave.CFrame)
+    end)
+    Teleport:NewButton("Tech Entry", "Teleports you to the Tech Entry", function()
+        function teleportTO(placeCFrame)
+            local plyr = game.Players.LocalPlayer;
+            if plyr.Character then
+                plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+            end
+        end
+        
+        teleportTO(game:GetService("Workspace")["__MAP"].Teleports["Ice Tech"].CFrame)
+    end)
+
+    -- misc options
+    local Misc = Window:NewTab("💡Misc")
+    local Teleport = Misc:NewSection("💡Misc")
+   Teleport:NewButton("Chat Spoofer", "Allows you to spoof chat", function()
+    loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
+    end)
+
+    --- player scripts
+    local Player = Window:NewTab("⛹️Player")
+    local PlayerSection = Player:NewSection("Player")
+
+    PlayerSection:NewSlider("WalkSpeed", "Change The WalkSpeed of your player", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end)
+    PlayerSection:NewSlider("JumpPower", "Change The JumpPower of your player", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+    end)
+    PlayerSection:NewButton("Reset WalkSpeed/JumpPower", "resets to default", function()
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end)
+end
